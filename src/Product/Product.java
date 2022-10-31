@@ -54,6 +54,14 @@ public class Product {
     }
 
     @Override
+    public String toString() {
+        return "Product.Product{" +
+                "nameProduct='" + nameProduct + '\'' +
+                ", price=" + price +
+                ", amountKg=" + amount +
+                '}' + "\n";
+    }
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -66,13 +74,5 @@ public class Product {
         return Objects.hash(nameProduct);
     }
 
-    @Override
-    public String toString() {
-        return "Product.Product{" +
-                "nameProduct='" + nameProduct + '\'' +
-                ", price=" + price +
-                ", amountKg=" + amount +
-                '}' + "\n";
-    }
 }
 

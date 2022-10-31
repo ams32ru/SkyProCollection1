@@ -10,6 +10,14 @@ public class Task {
         this.value2 = value2;
     }
 
+    public int getValue1() {
+        return value1;
+    }
+
+    public int getValue2() {
+        return value2;
+    }
+
     @Override
     public String toString() {
         return String.format("\n%s * %s = ? ", value1, value2);

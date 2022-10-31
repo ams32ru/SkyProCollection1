@@ -43,6 +43,17 @@ public class Passport {
     }
 
     @Override
+    public String toString() {
+        return "Passport{" +
+                "number=" + number +
+                ", lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", localDate=" + localDate +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

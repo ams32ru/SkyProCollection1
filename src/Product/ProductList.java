@@ -15,7 +15,6 @@ public class ProductList {
             productList.add(product);
         }
     }
-
     public void checkProduct(String name) {
         for (Product product : productList) {
             if (product.getNameProduct().equals(name)) {
@@ -40,5 +39,18 @@ public class ProductList {
         return "ProductList{" +
                 "productList=" + productList +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductList that = (ProductList) o;
+        return Objects.equals(productList, that.productList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productList);
     }
 }
