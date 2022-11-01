@@ -55,11 +55,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product.Product{" +
-                "nameProduct='" + nameProduct + '\'' +
-                ", price=" + price +
-                ", amountKg=" + amount +
-                '}' + "\n";
+        return "\nПродукт: " + nameProduct +
+                ", Цена(руб/кг) = " + price +
+                ", количество кг: " + amount;
     }
     @Override
     public boolean equals(Object o) {

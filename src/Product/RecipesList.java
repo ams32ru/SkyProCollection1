@@ -1,21 +1,23 @@
 package Product;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class RecipesList {
-    private final Set<Recipes> recipes =new HashSet<>();
+    private final Map<Recipes, Integer> recipes =new HashMap<>();
 
-    public Set<Recipes> getRecipes() {
+    public Map<Recipes, Integer> getRecipes() {
         return recipes;
     }
 
-    public void addRecipes(Recipes recipe) {
-        if (recipes.contains(recipe)) {
-            throw new IllegalArgumentException("Такой рецепт уже существует");
-        } else {
-            recipes.add(recipe);
+    public void addRecipes(Recipes recipes, Integer integer) {
+        this.recipes.put(recipes, recipes.getRecipesPrise());
+    }
+
+    public void printRecipes() {
+        Set<Map.Entry<Recipes,Integer>> printRecip = recipes.entrySet();
+        for (Map.Entry<Recipes, Integer> recipEntry : printRecip) {
+            System.out.print(recipEntry.getKey());
+            System.out.println("Итого " + recipEntry.getValue() + " рублей");
         }
     }
 
