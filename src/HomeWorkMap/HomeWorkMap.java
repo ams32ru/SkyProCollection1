@@ -15,15 +15,34 @@ public class HomeWorkMap {
     }
 
     public void appStIntMap(String s, Integer i) {
-        if (stringIntegerMap.containsKey(s)&&stringIntegerMap.containsValue(i)) {
-            throw new IllegalArgumentException("Такие ключ и значение уже добавлены");
-        }
-        if (stringIntegerMap.containsKey(s)) {
-            stringIntegerMap.put(s, i);  //тут непонятно, вроде как обновляется и ключ и значение,
-        } else {                             // но ключ то одинаковый, не знаю считается это или нет
-            this.stringIntegerMap.put(s, i);
-        }
+            if (i == stringIntegerMap.get(s) ) {
+                throw new IllegalArgumentException("Такая пара уже существует");
+            } else {
+                stringIntegerMap.put(s, i);
+            }
+
     }
+
+//    public static void addCars(String string, Integer number) {
+//        try {
+//            if (Objects.equals(cars.put(string, number), number)) {
+//                throw new RuntimeException("Значения совпадают");
+//            } else {
+//                cars.put(string, number);
+//            }
+//        } catch (RuntimeException e) {
+//            System.out.println("e = " + e);
+//        }
+//    }
+
+
+
+
+
+
+
+
+
 
     @Override
     public String toString() {

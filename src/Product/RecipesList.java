@@ -10,6 +10,9 @@ public class RecipesList {
     }
 
     public void addRecipes(Recipes recipes, Integer integer) {
+        if (recipes.getRecipesPrise() == integer) {
+            integer += recipes.getRecipesPrise();
+        }
         this.recipes.put(recipes, recipes.getRecipesPrise());
     }
 

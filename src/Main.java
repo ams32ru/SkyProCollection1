@@ -37,9 +37,9 @@ public class Main {
 
         Product banans = new Product("Банан", 79, 2);
         Product pineapple = new Product("Ананас", 230, 3);
-        Product apple = new Product("яблоко", 100, 3);
-        Product cucumber = new Product("Огурец", 99, 4);
-        Product cucumber2 = new Product("Огурец", 99, 4);
+        Product apple = new Product("яблоко", 100, 4);
+        Product cucumber = new Product("Огурец", 99, 1);
+        Product cucumber2 = new Product("Огурец", 99, 2);
         ProductList productList = new ProductList();
         productList.addProduct(banans);
         productList.addProduct(cucumber);
@@ -47,8 +47,11 @@ public class Main {
 //        System.out.println("productList.toString() = " + productList.toString());
 
         Recipes salt = new Recipes("Cалат", Set.of(cucumber,apple,pineapple));
+        Recipes fresh = new Recipes("Фрэш", Set.of(pineapple,banans));
         RecipesList recipesList = new RecipesList();
         recipesList.addRecipes(salt, salt.getRecipesPrise());
+        recipesList.addRecipes(fresh, fresh.getRecipesPrise());
+
 
         recipesList.printRecipes();
 
@@ -78,7 +81,9 @@ public class Main {
         HomeWorkMap mapRandom = new HomeWorkMap();
         mapRandom.appMapRandom("random1");
         mapRandom.appMapRandom("random2");
-        System.out.println("mapRandom.toString() = " + mapRandom.toString());
+//        System.out.println("mapRandom.toString() = " + mapRandom.toString());
+
+
 
 
     }
