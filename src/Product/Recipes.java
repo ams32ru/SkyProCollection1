@@ -27,7 +27,7 @@ public class Recipes {
     public int getRecipesPrise() {
         int sum = 0;
         for (Product product : recipesProduct) {
-            sum += product.getPrice();
+            sum += product.getPrice() * product.getAmount();
         }
         return sum;
     }
