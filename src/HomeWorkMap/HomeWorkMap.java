@@ -67,8 +67,6 @@ public class HomeWorkMap {
     //задание 2.1
 
    private static Map<String, List<Integer>> mapRandom = new HashMap<>();
-//    тут получилось только часть задания, потом я пытался сделать метод который вытащит List<Integer> из mapRandom, но не получилось
-//    застопорился сильно, переделал внизу по другому, если будет подсказка  тут, буду признателен
     public void appMapRandom(String s) {
         List<Integer> randomList = new ArrayList<>();
         Random random1 = new Random();

@@ -81,10 +81,7 @@ public class Main {
         HomeWorkMap mapRandom = new HomeWorkMap();
         mapRandom.appMapRandom("random1");
         mapRandom.appMapRandom("random2");
-//        System.out.println("mapRandom.toString() = " + mapRandom.toString());
-
-
-
+        System.out.println("mapRandom.toString() = " + mapRandom.toString());
 
     }
 }
